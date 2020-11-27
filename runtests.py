@@ -18,5 +18,5 @@ def test_add():
 
 if __name__ == '__main__':
     print("Starting the test")
-    runner().run(test_add())
+    runner().run(test_add)
     print("completed")
