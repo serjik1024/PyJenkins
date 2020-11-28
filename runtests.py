@@ -5,7 +5,7 @@ from book import Book
 
 books = Book()
 
-def runner(output='python_tests_xml'):
+def runner(output):
     return xmlrunner.XMLTestRunner(
         output=output
         )
@@ -19,6 +19,7 @@ class TestBook(unittest.TestCase):
 
 if __name__ == '__main__':
     print("Starting the runner test")
-    runner().run(unittest.main())
+    with open('results.xml', 'wb') as output:
+        runner(output).run(unittest.main())
     #unittest.main()
     print("completed")
